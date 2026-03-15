@@ -1,9 +1,9 @@
 server:
-  port: 8081
+  port: ${PORT:8081}
 
 auth:
   service:
-    url=http://localhost:8080:
+    url: http://localhost:8080
 
 spring:
   application:
@@ -31,11 +31,15 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
-        format_sql: true
+        format_sql: false
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
 ignisflow:
   mocktest-url: https://ignisflow-dev.azurewebsites.net/api/v1/run/e08cafc6-61c3-4bc8-8043-6489b5aa9119
   api:
     key: sk-cIYDY8-dip3_gMqtMOlFgy_NX6XG0NpAgvWBkGRCkko
-#    sk-BitwUYMqQpT4uidFw5BymQ00mqg_BwCo97kNgh7oqsI
+
+logging:
+  level:
+    root: WARN
+    com.example.demo: INFO
