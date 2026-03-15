@@ -1,0 +1,41 @@
+server:
+  port: 8081
+
+auth:
+  service:
+    url=http://localhost:8080:
+
+spring:
+  application:
+    name: mocktest-service
+
+  datasource:
+    url: jdbc:postgresql://aws-1-ap-northeast-2.pooler.supabase.com:5432/postgres
+    username: postgres.wkoueqskkrgkmsfgeirp
+    password: E9u0wddApeSKHGtx
+    driver-class-name: org.postgresql.Driver
+
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 1
+      connection-timeout: 20000
+      idle-timeout: 300000
+      max-lifetime: 1200000
+      data-source-properties:
+        sslmode: require
+
+  jpa:
+    open-in-view: false
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+ignisflow:
+  mocktest-url: https://ignisflow-dev.azurewebsites.net/api/v1/run/e08cafc6-61c3-4bc8-8043-6489b5aa9119
+  api:
+    key: sk-cIYDY8-dip3_gMqtMOlFgy_NX6XG0NpAgvWBkGRCkko
+#    sk-BitwUYMqQpT4uidFw5BymQ00mqg_BwCo97kNgh7oqsI

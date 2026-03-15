@@ -1,0 +1,16 @@
+package com.example.demo.dtos;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class UserInfoResponse {
+    private String email;
+    private String name;
+    private Long id;
+}
